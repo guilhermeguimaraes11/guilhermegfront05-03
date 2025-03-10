@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 import api from "../axios/axios";
 
 // Imports para criação de tabela
@@ -9,10 +11,11 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 
 // TableBody é onde colocamos o conteúdo
-import TableBody from "@mui/material/TableBody";
-import TableRow from "@mui/material/TableRow";
-import TableCell from "@mui/material/TableCell";
 import Paper from "@mui/material/Paper";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableRow from "@mui/material/TableRow";
+
 
 function Evento() {
   const [eventos, setEventos] = useState([]);
@@ -61,6 +64,11 @@ function Evento() {
           <TableBody>{listEventos}</TableBody>
         </Table>
       </TableContainer>
+
+      <h3>Criar Eventos</h3>
+      <Button  variant="contained" component={Link} to="/evento/novo">
+        Crie Eventos
+      </Button>
     </div>
   );
 }

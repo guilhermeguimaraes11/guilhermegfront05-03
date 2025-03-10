@@ -1,7 +1,7 @@
 function novoEvento() {
   return (
     <div>
-      <h5>Criar Eventos</h5>
+      <h3>Criar Eventos</h3>
     </div>
   );
 }
